@@ -1,1 +1,18 @@
-<p>menu works!</p>
+<div class="menu-container">
+    <header class="shop-header">
+      <h1>Spell & Weapon Shop</h1>
+      <p>Equip yourself for adventures across the Land of Ooo!</p>
+    </header>
+  
+    <div class="items-grid">
+      @for (product of products(); track product.id) {
+        <app-product-card 
+          [item]="product" 
+          (addToPouch)="onAddItem($event)">
+        </app-product-card>
+      } @empty {
+        <p class="empty-notice">Choose Goose cleared out the inventory!</p>
+      }
+    </div>
+  </div>
+  
