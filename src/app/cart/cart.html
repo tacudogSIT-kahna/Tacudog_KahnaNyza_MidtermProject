@@ -1,1 +1,36 @@
-<p>cart works!</p>
+<div class="cart-container">
+    <h2>Your Adventure Pouch</h2>
+  
+    @if (cartItems().length > 0) {
+      <div class="cart-layout">
+        <div class="items-list">
+          @for (cartItem of cartItems(); track cartItem.id) {
+            <app-cart-item-row
+              [item]="cartItem"
+              (updateQty)="onQuantityChange($event)"
+              (removeItem)="onItemRemove($event)">
+            </app-cart-item-row>
+          }
+        </div>
+  
+        <div class="summary-card">
+          <h3>Order Summary</h3>
+          <div class="summary-row">
+            <span>Total Cost:</span>
+            <span class="total-amount">{{ totalCost() }} 💰</span>
+          </div>
+          
+          <div class="action-buttons">
+            <button class="checkout-btn" (click)="onCheckout()">Checkout Order</button>
+            <button class="clear-btn" (click)="onClearCart()">Empty Pouch</button>
+          </div>
+        </div>
+      </div>
+    } @else {
+      <div class="empty-state">
+        <p>Your pouch is empty! Grab some weapons or potions before stepping into the wild.</p>
+        <button class="back-btn" routerLink="/menu">Return to Catalog</button>
+      </div>
+    }
+  </div>
+  
