@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { KioskStoreService, ShopItem } from '../kiosk-store';
-import { ProductCardComponent } from '../product-card/product-card.component';
+import { ProductCardComponent } from '../product-card/product-card';
 
 @Component({
   selector: 'app-menu',
