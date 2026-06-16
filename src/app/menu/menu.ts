@@ -7,8 +7,8 @@ import { ProductCardComponent } from '../product-card/product-card.component';
   selector: 'app-menu',
   standalone: true,
   imports: [CommonModule, ProductCardComponent],
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  templateUrl: './menu.html',
+  styleUrls: ['./menu.css']
 })
 export class MenuComponent {
   private store = inject(KioskStoreService);

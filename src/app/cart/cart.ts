@@ -2,14 +2,14 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { KioskStoreService } from '../kiosk-store';
-import { CartItemRowComponent } from '../cart-item-row/cart-item-row.component';
+import { CartItemRowComponent } from '../cart-item-row/cart-item-row';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
   imports: [CommonModule, RouterModule, CartItemRowComponent],
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  templateUrl: './cart.html',
+  styleUrls: ['./cart.css']
 })
 export class CartComponent {
   private store = inject(KioskStoreService);

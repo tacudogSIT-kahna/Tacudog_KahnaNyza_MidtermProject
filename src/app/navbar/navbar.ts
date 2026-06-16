@@ -7,8 +7,8 @@ import { KioskStoreService } from '../kiosk-store';
   selector: 'app-navbar',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  templateUrl: './navbar.html',
+  styleUrls: ['./navbar.css']
 })
 export class NavbarComponent {
   private store = inject(KioskStoreService);

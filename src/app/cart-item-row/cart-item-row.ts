@@ -6,8 +6,8 @@ import { CartItem } from '../kiosk-store';
   selector: 'app-cart-item-row',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './cart-item-row.component.html',
-  styleUrls: ['./cart-item-row.component.css']
+  templateUrl: './cart-item-row.html',
+  styleUrls: ['./cart-item-row.css']
 })
 export class CartItemRowComponent {
   @Input({ required: true }) item!: CartItem;
