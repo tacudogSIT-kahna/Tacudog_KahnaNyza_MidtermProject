@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { KioskStoreService } from '../kiosk-store';
+import { KioskStoreService } from '../services/kiosk-store';
 
 @Component({
   selector: 'app-navbar',
@@ -12,6 +12,5 @@ import { KioskStoreService } from '../kiosk-store';
 })
 export class NavbarComponent {
   private store = inject(KioskStoreService);
-  
   public cartCount = this.store.cartCount;
 }

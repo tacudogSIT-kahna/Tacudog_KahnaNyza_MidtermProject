@@ -1,9 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ShopItem } from '../services/kiosk-store';
 
 @Component({
   selector: 'app-product-card',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './product-card.html',
-  styleUrl: './product-card.css',
+  styleUrls: ['./product-card.css']
 })
-export class ProductCard {}
+export class ProductCardComponent {
+  @Input({ required: true }) item!: ShopItem;
+  @Output() addToPouch = new EventEmitter<ShopItem>();
+
+  onAddClick() {
+    this.addToPouch.emit(this.item);
+  }
+}
