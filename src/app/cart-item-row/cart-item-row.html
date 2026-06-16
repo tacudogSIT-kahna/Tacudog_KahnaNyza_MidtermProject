@@ -1,1 +1,20 @@
-<p>cart-item-row works!</p>
+<div class="row-container">
+    <div class="item-pic">{{ item.imageUrl }}</div>
+    
+    <div class="item-details">
+      <h4>{{ item.name }}</h4>
+      <span class="price-info">{{ item.price }} 💰 each</span>
+    </div>
+  
+    <div class="qty-controls">
+      <button class="qty-btn" (click)="onChangeQty(-1)">-</button>
+      <span class="qty-display">{{ item.quantity }}</span>
+      <button class="qty-btn" (click)="onChangeQty(1)">+</button>
+    </div>
+  
+    <div class="total-section">
+      <span class="row-total">{{ item.price * item.quantity }} 💰</span>
+      <button class="del-btn" (click)="onRemove()">❌</button>
+    </div>
+  </div>
+  
