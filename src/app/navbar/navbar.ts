@@ -1,9 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { KioskStoreService } from '../kiosk-store';
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
-  templateUrl: './navbar.html',
-  styleUrl: './navbar.css',
+  standalone: true,
+  imports: [CommonModule, RouterModule],
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class Navbar {}
+export class NavbarComponent {
+  private store = inject(KioskStoreService);
+  
+  public cartCount = this.store.cartCount;
+}
