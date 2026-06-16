@@ -26,7 +26,7 @@ export class CartComponent {
     this.store.clearCart();
   }
   onCheckout() {
-    alert('Awesome! Your adventure gear has been prepared!');
+    alert('Mathematical! Your adventure gear has been prepared!');
     this.store.clearCart();
   }
 }
