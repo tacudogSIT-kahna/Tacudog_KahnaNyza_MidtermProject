@@ -1,15 +1,30 @@
-<div class="hero-container">
-    <div class="welcome-box">
-      <div class="mascot-row">⚔️ 🐶</div>
-      <h1>Finn & Jake's Shop</h1>
-      <p class="subtitle">The premier destination in the Land of Ooo for all your questing gear.</p>
-      
-      <div class="features">
-        <div class="feat-tag">🧪 Pure Potions</div>
-        <div class="feat-tag">⚔️ Heroic Weapons</div>
-        <div class="feat-tag">🧥 Enchanted Gear</div>
-      </div>
-  
-      <button class="start-btn" routerLink="/menu">Touch to Order</button>
+<div class="home-wrapper">
+  <div class="shop-hero-card">
+    <!-- Points directly to your local public resource folder -->
+    <div class="hero-image-container">
+      <img src="bmo-title-logo.png" alt="BMO" class="hero-graphic">
     </div>
-  </div>  
+    <h1>Finn & Jake's Spell & Weapon Shop</h1>
+    <p class="shop-description">
+      Welcome to the premier trading post in the Land of Ooo! Stock up on magical concoctions, 
+      legendary blade artifacts, and armor forged deep within Wizard City before embarking on your next heroic quest.
+    </p>
+  </div>
+
+  <div class="category-navigation-grid">
+    <button class="nav-card-btn potion-style" routerLink="/menu">
+      <span class="btn-icon">🧪</span>
+      <span class="btn-label">Pure Potions</span>
+    </button>
+
+    <button class="nav-card-btn weapon-style" routerLink="/menu">
+      <span class="btn-icon">⚔️</span>
+      <span class="btn-label">Heroic Weapons</span>
+    </button>
+
+    <button class="nav-card-btn gear-style" routerLink="/menu">
+      <span class="btn-icon">🧥</span>
+      <span class="btn-label">Enchanted Gear</span>
+    </button>
+  </div>
+</div>

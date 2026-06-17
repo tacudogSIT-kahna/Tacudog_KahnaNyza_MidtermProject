@@ -1,76 +1,117 @@
-.hero-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 70px);
-    padding: 20px;
+.home-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.shop-hero-card {
+  background: #fffdf4;
+  border: 5px solid #4a3319;
+  border-radius: 24px;
+  padding: 40px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 10px 0 #4a3319;
+}
+
+/* Redesigned graphic display box to highlight the dancing transparency vector */
+.hero-image-container {
+  width: 100%;
+  max-height: 220px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-graphic {
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.shop-hero-card h1 {
+  font-size: 2.4rem;
+  color: #2b1a08;
+  margin: 10px 0 14px 0;
+}
+
+.shop-description {
+  font-size: 1.15rem;
+  color: #6b5238;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.category-navigation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 100%;
+  max-width: 900px;
+}
+
+@media (max-width: 768px) {
+  .category-navigation-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .welcome-box {
-    background: #fffdf6;
-    border: 5px solid #4a3319;
-    border-radius: 24px;
-    padding: 50px 30px;
-    text-align: center;
-    max-width: 600px;
-    width: 100%;
-    box-shadow: 0 8px 0 #4a3319;
-  }
-  
-  .mascot-row {
-    font-size: 4rem;
-    margin-bottom: 10px;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    color: #2b1a08;
-    margin: 0 0 15px 0;
-  }
-  
-  .subtitle {
-    font-size: 1.2rem;
-    color: #6b5238;
-    line-height: 1.6;
-    margin-bottom: 30px;
-  }
-  
-  .features {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-  }
-  
-  .feat-tag {
-    background: #e2d1bc;
-    color: #4a3319;
-    padding: 8px 16px;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 0.95rem;
-  }
-  
-  .start-btn {
-    background: #f1c40f;
-    color: #2c3e50;
-    border: 4px solid #4a3319;
-    padding: 16px 40px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 4px 0 #4a3319;
-    transition: transform 0.1s, box-shadow 0.1s;
-  }
-  
-  .start-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 0 #4a3319;
-  }
-  
-  .start-btn:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 0 #4a3319;
-  }  
+}
+
+.nav-card-btn {
+  background: #fffdf4;
+  border: 5px solid #4a3319;
+  border-radius: 20px;
+  padding: 35px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 8px 0 #4a3319;
+}
+
+.nav-card-btn:hover {
+  transform: translateY(-5px);
+}
+
+.nav-card-btn:active {
+  transform: translateY(3px);
+}
+
+.btn-icon {
+  font-size: 3.5rem;
+}
+
+.btn-label {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2b1a08;
+}
+
+.potion-style {
+  background: #f4ecf7;
+}
+.potion-style:hover {
+  box-shadow: 0 12px 0 #4a3319;
+}
+
+.weapon-style {
+  background: #f9ebea;
+}
+.weapon-style:hover {
+  box-shadow: 0 12px 0 #4a3319;
+}
+
+.gear-style {
+  background: #eaf2f8;
+}
+.gear-style:hover {
+  box-shadow: 0 12px 0 #4a3319;
+}
