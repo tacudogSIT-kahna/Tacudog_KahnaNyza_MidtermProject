@@ -4,59 +4,62 @@
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 35px;
   align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 90px);
   background: transparent !important;
+  box-sizing: border-box;
 }
 
-/* Main Hero Card Panel - Transparent Frosted Glass Design */
+/* Main Welcome Card Panel - Sleek Frosted Frame */
 .shop-hero-card {
-  background: rgba(255, 255, 255, 0.2) !important;
-  backdrop-filter: blur(12px) saturate(140%) !important;
-  -webkit-backdrop-filter: blur(12px) saturate(140%) !important;
-  border: 5px solid #4a3319;
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(16px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(140%) !important;
+  border: 3px solid rgba(255, 255, 255, 0.35);
   border-radius: 24px;
-  padding: 40px;
+  padding: 35px 40px;
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
   text-align: center;
-  box-shadow: 0 10px 0 #4a3319, 0 8px 32px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
 }
 
 .hero-image-container {
   width: 100%;
-  max-height: 220px;
-  margin-bottom: 20px;
+  height: 150px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 .hero-graphic {
   max-width: 100%;
-  max-height: 220px;
+  max-height: 150px;
   object-fit: contain;
 }
 
 .shop-hero-card h1 {
   font-size: 2.6rem;
-  color: #fffdf4; /* Bright cream color for excellent readability */
-  margin: 15px 0;
+  color: #fffdf4;
+  margin: 10px 0;
   line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(43, 26, 8, 0.8); /* Dark text drop-shadow anchor */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .shop-description {
   font-weight: 700;
-  font-size: 1.25rem;
-  color: #fcfcfc; /* Crisp, pure light font color */
+  font-size: 1.15rem;
+  color: #fcfcfc;
   line-height: 1.6;
   margin: 0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Deepened shadow boundary */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-/* Category Selection Control Matrix */
+/* Category Buttons Lower Grid Matrix - Expanded Width */
 .category-navigation-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -71,81 +74,83 @@
   }
 }
 
-/* Base Category Cards - Completely Clear and Blurred */
+/* Reusable Nav Buttons - Increased Padding and Height for Massive Look */
 .nav-card-btn {
-  border: 5px solid #4a3319;
-  border-radius: 20px;
-  padding: 35px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 30px 20px;
+  height: 180px; /* Enhanced height for a larger click surface */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 15px;
   cursor: pointer;
-  box-shadow: 0 8px 0 #4a3319, 0 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
   transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
-  backdrop-filter: blur(10px) saturate(130%) !important;
-  -webkit-backdrop-filter: blur(10px) saturate(130%) !important;
+  backdrop-filter: blur(12px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(130%) !important;
+  box-sizing: border-box;
 }
 
 .nav-card-btn:active {
-  transform: translateY(4px);
-  box-shadow: 0 4px 0 #4a3319;
+  transform: translateY(3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.btn-icon {
-  font-size: 3.5rem;
-  transition: transform 0.2s ease;
+/* Upscaled Potion Image and Emojis to draw visual weight */
+.btn-icon, .custom-tab-icon {
+  width: 70px;  /* Increased size from 45px */
+  height: 70px; /* Increased size from 45px */
+  font-size: 3.5rem; /* Enlarged emoji fonts */
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
 }
 
+/* Upscaled Text Labels Inside the Buttons */
 .btn-label {
   font-weight: 800;
-  font-size: 1.35rem;
-  color: #fffdf4; /* Bright contrasting font color for buttons */
-  transition: color 0.2s ease;
-  text-shadow: 1px 1px 3px rgba(43, 26, 8, 0.9); /* Dark pop text shadow */
+  font-size: 1.35rem; /* Increased size from 1.15rem */
+  color: #fffdf4;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  text-align: center;
 }
 
-.nav-card-btn:hover .btn-icon {
-  transform: scale(1.15) rotate(-5deg);
-}
-
-/* --- THEME HOVER STATES (Smooth deep color block transformations) --- */
+/* --- LIGHT SLICK THEME ACCENT BORDERS --- */
 
 .potion-style {
-  background: rgba(244, 236, 247, 0.35);
+  border: 3px solid rgba(187, 143, 206, 0.5);
 }
 .potion-style:hover {
-  background: rgba(187, 143, 206, 0.9) !important;
+  background: rgba(187, 143, 206, 0.85) !important;
+  border-color: #bb8fce;
   transform: translateY(-5px);
-  box-shadow: 0 12px 0 #4a3319;
-}
-.potion-style:hover .btn-label {
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 24px rgba(187, 143, 206, 0.4);
 }
 
 .weapon-style {
-  background: rgba(249, 235, 234, 0.35);
+  border: 3px solid rgba(241, 196, 15, 0.5);
 }
 .weapon-style:hover {
-  background: rgba(231, 76, 60, 0.9) !important;
+  background: rgba(241, 196, 15, 0.8) !important;
+  border-color: #f1c40f;
   transform: translateY(-5px);
-  box-shadow: 0 12px 0 #4a3319;
+  box-shadow: 0 12px 24px rgba(241, 196, 15, 0.4);
 }
 .weapon-style:hover .btn-label {
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  color: #2c3e50;
+  text-shadow: none;
 }
 
 .gear-style {
-  background: rgba(234, 242, 248, 0.35);
+  border: 3px solid rgba(52, 152, 219, 0.5);
 }
 .gear-style:hover {
-  background: rgba(52, 152, 219, 0.9) !important;
+  background: rgba(52, 152, 219, 0.85) !important;
+  border-color: #3498db;
   transform: translateY(-5px);
-  box-shadow: 0 12px 0 #4a3319;
-}
-.gear-style:hover .btn-label {
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 24px rgba(52, 152, 219, 0.4);
 }

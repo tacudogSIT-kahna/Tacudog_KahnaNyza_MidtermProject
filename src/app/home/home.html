@@ -1,10 +1,9 @@
 <div class="home-wrapper">
   <div class="shop-hero-card">
-    <!-- Points directly to your local public resource folder -->
     <div class="hero-image-container">
       <img src="bmo-title-logo.png" alt="BMO" class="hero-graphic">
     </div>
-    <h1>Welcome to BMO's Butterbee Bazaar!</h1>
+    <h1>BMO's Butterbee Bazaar</h1>
     <p class="shop-description">
       Yay! Welcome to my cozy garden trading post in the Land of Ooo! Buzz around and check out 
       my pure magical potions, heroic battle weapons, and enchanted clothing gear before you go on your next big adventure!
@@ -12,8 +11,11 @@
   </div>
 
   <div class="category-navigation-grid">
+    <!-- Points directly to public/potion.png natively without folder prefixes -->
     <button class="nav-card-btn potion-style" routerLink="/menu">
-      <span class="btn-icon">🧪</span>
+      <span class="btn-icon">
+        <img src="potion.png" alt="Potion" class="custom-tab-icon">
+      </span>
       <span class="btn-label">Pure Potions</span>
     </button>
 
