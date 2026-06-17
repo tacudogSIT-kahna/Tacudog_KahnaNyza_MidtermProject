@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://googleapis.com');
+
+/* Apply font architecture globally across all kiosk components */
+body, html {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #ebe3d5;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, .nav-brand {
+  font-family: 'Caprasimo', serif;
+  letter-weight: normal;
+}
