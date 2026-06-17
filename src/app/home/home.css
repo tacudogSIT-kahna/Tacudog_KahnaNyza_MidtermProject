@@ -12,7 +12,6 @@
   box-sizing: border-box;
 }
 
-/* Main Welcome Card Panel - Sleek Frosted Frame */
 .shop-hero-card {
   background: rgba(255, 255, 255, 0.15) !important;
   backdrop-filter: blur(16px) saturate(140%) !important;
@@ -59,7 +58,6 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-/* Category Buttons Lower Grid Matrix - Expanded Width */
 .category-navigation-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -74,12 +72,11 @@
   }
 }
 
-/* Reusable Nav Buttons - Increased Padding and Height for Massive Look */
 .nav-card-btn {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 24px;
   padding: 30px 20px;
-  height: 180px; /* Enhanced height for a larger click surface */
+  height: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,32 +95,36 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Upscaled Potion Image and Emojis to draw visual weight */
-.btn-icon, .custom-tab-icon {
-  width: 70px;  /* Increased size from 45px */
-  height: 70px; /* Increased size from 45px */
-  font-size: 3.5rem; /* Enlarged emoji fonts */
+.btn-icon {
+  width: 90px;
+  height: 90px;
+  font-size: 4rem;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  object-fit: contain;
 }
 
-/* Upscaled Text Labels Inside the Buttons */
+.custom-tab-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+}
+
 .btn-label {
   font-weight: 800;
-  font-size: 1.35rem; /* Increased size from 1.15rem */
+  font-size: 1.35rem;
   color: #fffdf4;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   text-align: center;
 }
 
-/* --- LIGHT SLICK THEME ACCENT BORDERS --- */
-
 .potion-style {
   border: 3px solid rgba(187, 143, 206, 0.5);
 }
+
 .potion-style:hover {
   background: rgba(187, 143, 206, 0.85) !important;
   border-color: #bb8fce;
@@ -134,12 +135,14 @@
 .weapon-style {
   border: 3px solid rgba(241, 196, 15, 0.5);
 }
+
 .weapon-style:hover {
   background: rgba(241, 196, 15, 0.8) !important;
   border-color: #f1c40f;
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(241, 196, 15, 0.4);
 }
+
 .weapon-style:hover .btn-label {
   color: #2c3e50;
   text-shadow: none;
@@ -148,6 +151,7 @@
 .gear-style {
   border: 3px solid rgba(52, 152, 219, 0.5);
 }
+
 .gear-style:hover {
   background: rgba(52, 152, 219, 0.85) !important;
   border-color: #3498db;
