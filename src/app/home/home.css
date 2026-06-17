@@ -6,17 +6,21 @@
   flex-direction: column;
   gap: 40px;
   align-items: center;
+  background: transparent !important;
 }
 
+/* Main Hero Card Panel - Transparent Frosted Glass Design */
 .shop-hero-card {
-  background: #fffdf4;
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(12px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(140%) !important;
   border: 5px solid #4a3319;
   border-radius: 24px;
   padding: 40px;
   width: 100%;
   max-width: 800px;
   text-align: center;
-  box-shadow: 0 10px 0 #4a3319;
+  box-shadow: 0 10px 0 #4a3319, 0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
 .hero-image-container {
@@ -36,21 +40,23 @@
 }
 
 .shop-hero-card h1 {
-  font-size: 2.6rem; /* Enhanced visibility scale */
-  color: #2b1a08;
+  font-size: 2.6rem;
+  color: #fffdf4; /* Bright cream color for excellent readability */
   margin: 15px 0;
   line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(43, 26, 8, 0.8); /* Dark text drop-shadow anchor */
 }
 
 .shop-description {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 500;
-  font-size: 1.2rem;
-  color: #6b5238;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #fcfcfc; /* Crisp, pure light font color */
   line-height: 1.6;
   margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Deepened shadow boundary */
 }
 
+/* Category Selection Control Matrix */
 .category-navigation-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -65,8 +71,8 @@
   }
 }
 
+/* Base Category Cards - Completely Clear and Blurred */
 .nav-card-btn {
-  background: #fffdf4;
   border: 5px solid #4a3319;
   border-radius: 20px;
   padding: 35px 20px;
@@ -75,34 +81,71 @@
   align-items: center;
   gap: 15px;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 8px 0 #4a3319;
-}
-
-.nav-card-btn:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 8px 0 #4a3319, 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+  backdrop-filter: blur(10px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(130%) !important;
 }
 
 .nav-card-btn:active {
-  transform: translateY(3px);
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 #4a3319;
 }
 
 .btn-icon {
   font-size: 3.5rem;
+  transition: transform 0.2s ease;
 }
 
 .btn-label {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: #2b1a08;
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: #fffdf4; /* Bright contrasting font color for buttons */
+  transition: color 0.2s ease;
+  text-shadow: 1px 1px 3px rgba(43, 26, 8, 0.9); /* Dark pop text shadow */
 }
 
-.potion-style { background: #f4ecf7; }
-.potion-style:hover { box-shadow: 0 12px 0 #4a3319; }
+.nav-card-btn:hover .btn-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
 
-.weapon-style { background: #f9ebea; }
-.weapon-style:hover { box-shadow: 0 12px 0 #4a3319; }
+/* --- THEME HOVER STATES (Smooth deep color block transformations) --- */
 
-.gear-style { background: #eaf2f8; }
-.gear-style:hover { box-shadow: 0 12px 0 #4a3319; }
+.potion-style {
+  background: rgba(244, 236, 247, 0.35);
+}
+.potion-style:hover {
+  background: rgba(187, 143, 206, 0.9) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 0 #4a3319;
+}
+.potion-style:hover .btn-label {
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.weapon-style {
+  background: rgba(249, 235, 234, 0.35);
+}
+.weapon-style:hover {
+  background: rgba(231, 76, 60, 0.9) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 0 #4a3319;
+}
+.weapon-style:hover .btn-label {
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.gear-style {
+  background: rgba(234, 242, 248, 0.35);
+}
+.gear-style:hover {
+  background: rgba(52, 152, 219, 0.9) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 0 #4a3319;
+}
+.gear-style:hover .btn-label {
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}

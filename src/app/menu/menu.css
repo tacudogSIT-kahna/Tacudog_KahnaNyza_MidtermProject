@@ -1,36 +1,11 @@
 .menu-container {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .shop-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .shop-header h1 {
-    font-size: 2.5rem;
-    color: #2b1a08;
-    margin-bottom: 8px;
-  }
-  
-  .shop-header p {
-    font-size: 1.1rem;
-    color: #6b5238;
-  }
-  
-  .items-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-  }
-  
-  .empty-notice {
-    text-align: center;
-    grid-column: 1 / -1;
-    font-size: 1.2rem;
-    color: #c0392b;
-    margin-top: 40px;
-  }
-  
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+}
+/* Ensure product catalog cards look clear and professional against wallpaper */
+app-product-card .card {
+  background: rgba(255, 253, 244, 0.9) !important;
+  backdrop-filter: blur(4px);
+}

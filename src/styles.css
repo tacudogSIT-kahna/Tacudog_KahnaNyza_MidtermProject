@@ -1,14 +1,30 @@
 @import url('https://googleapis.com');
 
-/* Apply font architecture globally across all kiosk components */
-body, html {
-  font-family: 'Quicksand', sans-serif;
-  background-color: #ebe3d5;
-  margin: 0;
-  padding: 0;
+/* Strip away solid colors from all nested Angular wrapper elements */
+html, body, app-root, app-home, app-menu, app-cart, main, div.viewport-container {
+  background: transparent !important;
+  background-color: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force the image directly onto the outermost browser screen layer */
+html {
+  width: 100% !important;
+  min-height: 100vh !important;
+  background-color: #f1c40f !important; /* Yellow fallback to verify the layer works */
+  background-image: url('/background.png') !important; /* Exact match for your background.jpg */
+  background-position: bottom center !important; /* Keeps the ground visible at the bottom */
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+}
+
+body {
+  min-height: 100vh !important;
 }
 
 h1, h2, h3, h4, .nav-brand {
   font-family: 'Caprasimo', serif;
-  letter-weight: normal;
+  font-weight: normal;
 }
