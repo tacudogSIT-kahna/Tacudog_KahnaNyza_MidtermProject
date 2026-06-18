@@ -1,6 +1,5 @@
 <div class="menu-container">
 
-  <!-- --- 🧪 POTIONS SECTION --- -->
   <div class="category-anchor" id="Potions"></div>
   <header class="section-shop-header">
     <h1>Pure Potions</h1>
@@ -15,7 +14,6 @@
     }
   </div>
 
-  <!-- --- ⚔️ WEAPONS SECTION --- -->
   <div class="category-anchor" id="Weapons"></div>
   <header class="section-shop-header">
     <h1>Heroic Weapons</h1>
@@ -30,7 +28,6 @@
     }
   </div>
 
-  <!-- --- 🧥 ENCHANTED GEAR SECTION --- -->
   <div class="category-anchor" id="Enchanted Gear"></div>
   <header class="section-shop-header">
     <h1>Enchanted Gear</h1>
@@ -44,5 +41,20 @@
       }
     }
   </div>
+
+  @if (store.cartCount() > 0) {
+    <button class="floating-pouch-btn" (click)="navigateToPouch()">
+      <div class="floating-btn-content">
+        <span class="floating-pouch-icon">💰</span>
+        <div class="floating-text-group">
+          <span class="floating-btn-title">View Adventure Pouch</span>
+          <span class="floating-btn-subtitle">
+            {{ store.cartCount() }} {{ store.cartCount() === 1 ? 'item' : 'items' }} · {{ store.totalPrice() }} 💰
+          </span>
+        </div>
+        <span class="floating-arrow-action">⚔️ Checkout</span>
+      </div>
+    </button>
+  }
 
 </div>

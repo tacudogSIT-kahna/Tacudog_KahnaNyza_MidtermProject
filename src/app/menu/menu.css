@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Master style rule applied to all black section divider boxes */
 .section-shop-header {
   text-align: center;
   margin: 40px 0 25px 0;
@@ -35,9 +34,8 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Scroll mapping boundary spacer metrics */
 .category-anchor {
-  height: 80px; /* Provides clean padding when scrolling down to a section */
+  height: 80px;
   width: 100%;
 }
 
@@ -47,4 +45,90 @@
   gap: 30px;
   width: 100%;
   margin-bottom: 20px;
+}
+
+.floating-pouch-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 12px 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: slideInUp 0.3s ease-out;
+}
+
+.floating-pouch-btn:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+.floating-pouch-btn:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+.floating-btn-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+}
+
+.floating-pouch-icon {
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.floating-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-btn-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.floating-btn-subtitle {
+  color: #fdd835;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+.floating-arrow-action {
+  background: #ffc107;
+  color: #212529;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  transition: background 0.2s;
+}
+
+.floating-pouch-btn:hover .floating-arrow-action {
+  background: #ffb300;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

@@ -1,6 +1,6 @@
 import { Component, inject, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { KioskStoreService, ShopItem } from '../services/kiosk-store';
 import { ProductCardComponent } from '../product-card/product-card';
 
@@ -12,10 +12,10 @@ import { ProductCardComponent } from '../product-card/product-card';
   styleUrls: ['./menu.css']
 })
 export class MenuComponent implements AfterViewInit {
-  private store = inject(KioskStoreService);
+  public store = inject(KioskStoreService);
+  private router = inject(Router);
 
   public currentCategory = this.store.activeCategory;
-  
   public products = this.store.products;
 
   ngAfterViewInit() {
@@ -32,5 +32,9 @@ export class MenuComponent implements AfterViewInit {
 
   onAddItem(item: ShopItem) {
     this.store.addToCart(item);
+  }
+
+  navigateToPouch() {
+    this.router.navigate(['/cart']);
   }
 }

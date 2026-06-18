@@ -5,7 +5,7 @@
   
   <div class="item-details">
     <h4 class="item-name">{{ item.name }}</h4>
-    <p class="item-price">{{ item.price }} <span class="gold-coin">🪙</span> <small>each</small></p>
+    <p class="item-price">{{ item.price }} 💰 <small>each</small></p>
   </div>
 
   <div class="quantity-controls">
@@ -15,7 +15,7 @@
   </div>
 
   <div class="item-total-section">
-    <span class="total-cost">{{ item.price * item.quantity }} 🪙</span>
+    <span class="total-cost">{{ item.price * item.quantity }} 💰</span>
     <button class="remove-btn" (click)="handleRemoval()" title="Discard Item">🗑️</button>
   </div>
 </div>
