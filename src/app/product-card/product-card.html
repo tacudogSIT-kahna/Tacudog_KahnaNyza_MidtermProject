@@ -4,7 +4,11 @@
     }
     
     <div class="item-graphic-container">
-      <span class="fallback-emoji">{{ item.imageUrl }}</span>
+      @if (item.imageUrl.endsWith('.png')) {
+        <img [src]="item.imageUrl" [alt]="item.name" class="catalog-potion-image">
+      } @else {
+        <span class="fallback-emoji">{{ item.imageUrl }}</span>
+      }
     </div>
     
     <div class="item-body">
