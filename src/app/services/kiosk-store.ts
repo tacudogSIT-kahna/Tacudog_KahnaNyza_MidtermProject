@@ -5,7 +5,8 @@ export interface ShopItem {
   name: string;
   description: string;
   price: number;
-  category: 'Potions' | 'Weapons' | 'Enchanted Clothing';
+  // Updated category type here
+  category: 'Potions' | 'Weapons' | 'Enchanted Gear';
   imageUrl: string;
   isRare?: boolean;
 }
@@ -28,17 +29,18 @@ export class KioskStoreService {
 
     { id: 6, name: 'Axe Bass', description: 'Marceline’s deadly family heirloom bass guitar modified into a battle axe.', price: 3200, category: 'Weapons', imageUrl: 'axe-bass.png', isRare: true },
     { id: 7, name: 'Demon Blood Sword', description: 'Forged from true demon blood by Joshua. Feels rugged and dangerously cold.', price: 2500, category: 'Weapons', imageUrl: 'demon-blood-sword.png', isRare: true },
-    { id: 8, name: 'Finn’s Sword', description: 'Finn’s trusted, well-chipped classic golden blade with a black hilt.', price: 300, category: 'Weapons', imageUrl: 'finns-sword.png', isRare: true }, // ADDED RARE STATUS
-    { id: 9, name: 'Grass Sword', description: 'A cursed, bound blade of grass that integrates directly onto your arm.', price: 1800, category: 'Weapons', imageUrl: 'grass-sword.png', isRare: true }, // ADDED RARE STATUS
+    { id: 8, name: 'Finn’s Sword', description: 'Finn’s trusted, well-chipped classic golden blade with a black hilt.', price: 300, category: 'Weapons', imageUrl: 'finns-sword.png', isRare: true }, 
+    { id: 9, name: 'Grass Sword', description: 'A cursed, bound blade of grass that integrates directly onto your arm.', price: 1800, category: 'Weapons', imageUrl: 'grass-sword.png', isRare: true }, 
     { id: 10, name: 'Root Sword', description: 'A unique natural wood blade with an incredibly sharp, twisted root grip.', price: 500, category: 'Weapons', imageUrl: 'root-sword.png' },
     { id: 17, name: 'Sound Sword', description: 'Projects powerful destructive golden shockwaves of pure sonic energy.', price: 1500, category: 'Weapons', imageUrl: 'sound-sword.png' },    
 
-    { id: 6, name: 'Axe Bass', description: 'Marceline’s deadly family heirloom bass guitar modified into a battle axe.', price: 3200, category: 'Weapons', imageUrl: 'axe-bass.png', isRare: true },
-    { id: 7, name: 'Demon Blood Sword', description: 'Forged from true demon blood by Joshua. Feels rugged and dangerously cold.', price: 2500, category: 'Weapons', imageUrl: 'demon-blood-sword.png', isRare: true },
-    { id: 8, name: 'Finn’s Sword', description: 'Finn’s trusted, well-chipped classic golden blade with a black hilt.', price: 300, category: 'Weapons', imageUrl: 'finns-sword.png', isRare: true }, // ADDED RARE STATUS
-    { id: 9, name: 'Grass Sword', description: 'A cursed, bound blade of grass that integrates directly onto your arm.', price: 1800, category: 'Weapons', imageUrl: 'grass-sword.png', isRare: true }, // ADDED RARE STATUS
-    { id: 10, name: 'Root Sword', description: 'A unique natural wood blade with an incredibly sharp, twisted root grip.', price: 500, category: 'Weapons', imageUrl: 'root-sword.png' },
-    { id: 17, name: 'Sound Sword', description: 'Projects powerful destructive golden shockwaves of pure sonic energy.', price: 1500, category: 'Weapons', imageUrl: 'sound-sword.png' },    
+    // Enchanted Gear - Renamed categories and matched image names
+    { id: 11, name: 'The Ice King’s Crown', description: 'Grants infinite frost magic at the cost of your sanity.', price: 9999, category: 'Enchanted Gear', imageUrl: 'ice-kings-crown.png', isRare: true },
+    { id: 12, name: 'Nightosphere Amulet', description: 'Grants full chaotic ownership of the Nightosphere. Transforms the wearer into a giant demon form.', price: 4500, category: 'Enchanted Gear', imageUrl: 'nightosphere-amulet.png', isRare: true },
+    { id: 13, name: 'Armor of Zeldron', description: 'Legendary golden plate armor complete with wings and horns. Emits absolute pure warrior power.', price: 3500, category: 'Enchanted Gear', imageUrl: 'armor-of-zeldron.png', isRare: true },
+    { id: 14, name: 'The Enchiridion', description: 'The ancient handbook for righteous heroes containing maps, guides, and mystical knowledge.', price: 5000, category: 'Enchanted Gear', imageUrl: 'enchiridion.png', isRare: true },
+    { id: 15, name: 'Gauntlet of Heroism', description: 'Billy’s legendary mechanical cybernetic gauntlet that blasts concentrated blue magical energy beams.', price: 6000, category: 'Enchanted Gear', imageUrl: 'gauntlet-of-heroism.png', isRare: true },
+    { id: 18, name: 'Glasses of Nerdicon', description: 'Instantly scales the wearer’s intelligence up to peak maximum levels, temporarily turning them into a massive nerd.', price: 1200, category: 'Enchanted Gear', imageUrl: 'glasses-of-nerdicon.png' }
   ]);
 
   private cartState = signal<CartItem[]>([]);

@@ -31,7 +31,7 @@
   </div>
 
   <!-- --- 🧥 ENCHANTED GEAR SECTION --- -->
-  <div class="category-anchor" id="Enchanted Clothing"></div>
+  <div class="category-anchor" id="Enchanted Gear"></div>
   <header class="section-shop-header">
     <h1>Enchanted Gear</h1>
     <p>Mystical garments imbued with protective defensive runes and cool hero vibes.</p>
@@ -39,7 +39,7 @@
   
   <div class="items-grid">
     @for (product of products(); track product.id) {
-      @if (product.category === 'Enchanted Clothing') {
+      @if (product.category === 'Enchanted Gear') {
         <app-product-card [item]="product" (addToPouch)="onAddItem($event)"></app-product-card>
       }
     }

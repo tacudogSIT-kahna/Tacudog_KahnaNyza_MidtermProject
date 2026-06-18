@@ -1,36 +1,35 @@
-<div class="cart-container">
-    <h2>Your Adventure Pouch</h2>
-  
-    @if (cartItems().length > 0) {
-      <div class="cart-layout">
-        <div class="items-list">
-          @for (cartItem of cartItems(); track cartItem.id) {
-            <app-cart-item-row
-              [item]="cartItem"
-              (updateQty)="onQuantityChange($event)"
-              (removeItem)="onItemRemove($event)">
-            </app-cart-item-row>
-          }
+<div class="adventure-pouch-container">
+  <h2 class="pouch-title">✨ Your Adventure Pouch ✨</h2>
+
+  <div class="pouch-scroll-wrapper">
+    <div class="cart-items-list">
+      @if (cartItems().length > 0) {
+        @for (cartItem of cartItems(); track cartItem.id) {
+          <app-cart-item-row
+            [item]="cartItem"
+            (updateQty)="onQuantityChange($event)"
+            (removeItem)="onItemRemove($event)">
+          </app-cart-item-row>
+        }
+      } @else {
+        <div class="empty-pouch-state">
+          <div class="empty-leaf-icon">🍃</div>
+          <p>Your pouch is empty! Grab some gear from the bazaar catalog.</p>
         </div>
-  
-        <div class="summary-card">
-          <h3>Order Summary</h3>
-          <div class="summary-row">
-            <span>Total Cost:</span>
-            <span class="total-amount">{{ totalCost() }} 💰</span>
-          </div>
-          
-          <div class="action-buttons">
-            <button class="checkout-btn" (click)="onCheckout()">Checkout Order</button>
-            <button class="clear-btn" (click)="onClearCart()">Empty Pouch</button>
-          </div>
-        </div>
+      }
+    </div>
+
+    <div class="order-summary-box">
+      <h3>📜 Order Summary</h3>
+      <div class="summary-row">
+        <span>Total Cost:</span>
+        <span class="final-price">{{ totalCost() }} 💰</span>
       </div>
-    } @else {
-      <div class="empty-state">
-        <p>Your pouch is empty! Grab some weapons or potions before stepping into the wild.</p>
-        <button class="back-btn" routerLink="/menu">Return to Catalog</button>
+      
+      <div class="action-buttons">
+        <button class="btn-action checkout" (click)="onCheckout()">⚔️ Checkout Order</button>
+        <button class="btn-action empty" (click)="onClearCart()">🧹 Empty Pouch</button>
       </div>
-    }
+    </div>
   </div>
-  
+</div>

@@ -1,32 +1,35 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { KioskStoreService } from '../services/kiosk-store';
 import { CartItemRowComponent } from '../cart-item-row/cart-item-row';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CommonModule, RouterModule, CartItemRowComponent],
+  imports: [CommonModule, CartItemRowComponent],
   templateUrl: './cart.html',
   styleUrls: ['./cart.css']
 })
 export class CartComponent {
-  private store = inject(KioskStoreService);
-  public cartItems = this.store.cart;
-  public totalCost = this.store.totalPrice;
+  private storeService = inject(KioskStoreService);
+
+  public cartItems = this.storeService.cart;
+  public totalCost = this.storeService.totalPrice;
+
+  onCheckout() {
+    alert('🛒 Order placed successfully! Safe travels in the Land of Ooo!');
+    this.storeService.clearCart();
+  }
+
+  onClearCart() {
+    this.storeService.clearCart();
+  }
 
   onQuantityChange(event: { itemId: number; change: number }) {
-    this.store.updateQuantity(event.itemId, event.change);
+    this.storeService.updateQuantity(event.itemId, event.change);
   }
+
   onItemRemove(itemId: number) {
-    this.store.removeFromCart(itemId);
-  }
-  onClearCart() {
-    this.store.clearCart();
-  }
-  onCheckout() {
-    alert('Mathematical! Your adventure gear has been prepared!');
-    this.store.clearCart();
+    this.storeService.removeFromCart(itemId);
   }
 }
