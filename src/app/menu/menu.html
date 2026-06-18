@@ -15,10 +15,8 @@
     }
   </header>
 
-  <!-- --- POTIONS ANCHOR SECTION --- -->
-  <div class="category-divider-block" id="Potions">
-    <h2>🧪 Pure Potions</h2>
-  </div>
+  <!-- --- POTIONS SECTION --- -->
+  <div class="category-anchor" id="Potions"></div>
   <div class="items-grid">
     @for (product of products(); track product.id) {
       @if (product.category === 'Potions') {
@@ -27,10 +25,8 @@
     }
   </div>
 
-  <!-- --- WEAPONS ANCHOR SECTION --- -->
-  <div class="category-divider-block" id="Weapons">
-    <h2>⚔️ Heroic Weapons</h2>
-  </div>
+  <!-- --- WEAPONS SECTION --- -->
+  <div class="category-anchor" id="Weapons"></div>
   <div class="items-grid">
     @for (product of products(); track product.id) {
       @if (product.category === 'Weapons') {
@@ -39,10 +35,8 @@
     }
   </div>
 
-  <!-- --- ENCHANTED GEAR ANCHOR SECTION --- -->
-  <div class="category-divider-block" id="Enchanted Clothing">
-    <h2>🧥 Enchanted Gear</h2>
-  </div>
+  <!-- --- ENCHANTED GEAR SECTION --- -->
+  <div class="category-anchor" id="Enchanted Clothing"></div>
   <div class="items-grid">
     @for (product of products(); track product.id) {
       @if (product.category === 'Enchanted Clothing') {
