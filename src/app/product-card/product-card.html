@@ -1,1 +1,21 @@
-<p>product-card works!</p>
+<div class="product-card" [class.rare-item]="item.isRare">
+    @if (item.isRare) {
+      <span class="rare-tag">RARE ARTIFACT</span>
+    }
+    
+    <div class="item-graphic-container">
+      <span class="fallback-emoji">{{ item.imageUrl }}</span>
+    </div>
+    
+    <div class="item-body">
+      <h3>{{ item.name }}</h3>
+      <span class="category-badge">{{ item.category }}</span>
+      <p class="description-text">{{ item.description }}</p>
+    </div>
+  
+    <div class="card-footer-row">
+      <span class="price-label">{{ item.price }} 💰</span>
+      <button class="add-to-pouch-btn" (click)="onAddClick()">Add to Pouch</button>
+    </div>
+  </div>
+  
