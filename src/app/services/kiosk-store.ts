@@ -37,12 +37,17 @@ export class KioskStoreService {
   ]);
 
   private cartState = signal<CartItem[]>([]);
+  public activeCategory = signal<string>('All');
 
   public products = this.itemsState.asReadonly();
   public cart = this.cartState.asReadonly();
 
   public cartCount = computed(() => this.cartState().reduce((acc, item) => acc + item.quantity, 0));
   public totalPrice = computed(() => this.cartState().reduce((acc, item) => acc + (item.price * item.quantity), 0));
+
+  setCategory(category: string) {
+    this.activeCategory.set(category);
+  }
 
   addToCart(item: ShopItem) {
     const currentCart = this.cartState();

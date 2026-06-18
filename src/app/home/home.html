@@ -11,21 +11,21 @@
   </div>
 
   <div class="category-navigation-grid">
-    <button class="nav-card-btn potion-style" routerLink="/menu">
+    <button class="nav-card-btn potion-style" (click)="navigateToCategory('Potions')">
       <span class="btn-icon">
         <img src="potion.png" alt="Potion" class="custom-tab-icon">
       </span>
       <span class="btn-label">Pure Potions</span>
     </button>
 
-    <button class="nav-card-btn weapon-style" routerLink="/menu">
+    <button class="nav-card-btn weapon-style" (click)="navigateToCategory('Weapons')">
       <span class="btn-icon">
         <img src="sword.png" alt="Sword" class="custom-tab-icon">
       </span>
       <span class="btn-label">Heroic Weapons</span>
     </button>
 
-    <button class="nav-card-btn gear-style" routerLink="/menu">
+    <button class="nav-card-btn gear-style" (click)="navigateToCategory('Enchanted Clothing')">
       <span class="btn-icon">
         <img src="gear.png" alt="Gear" class="custom-tab-icon">
       </span>

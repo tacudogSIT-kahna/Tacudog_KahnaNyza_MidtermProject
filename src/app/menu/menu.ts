@@ -13,7 +13,9 @@ import { ProductCardComponent } from '../product-card/product-card';
 })
 export class MenuComponent {
   private store = inject(KioskStoreService);
-  public products = this.store.products;
+
+  public currentCategory = this.store.activeCategory;
+  public products = this.store.filteredProducts;
 
   onAddItem(item: ShopItem) {
     this.store.addToCart(item);

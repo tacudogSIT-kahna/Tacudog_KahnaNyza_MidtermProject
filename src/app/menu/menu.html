@@ -1,18 +1,53 @@
 <div class="menu-container">
-    <header class="shop-header">
+  <header class="shop-header">
+    @if (currentCategory() === 'Potions') {
+      <h1>Pure Potions</h1>
+      <p>Powerful magical brews and status enhancements straight from Wizard City labs.</p>
+    } @else if (currentCategory() === 'Weapons') {
+      <h1>Heroic Weapons</h1>
+      <p>Legendary blades and sharp gear forged to crush evil monsters.</p>
+    } @else if (currentCategory() === 'Enchanted Clothing') {
+      <h1>Enchanted Gear</h1>
+      <p>Mystical garments imbued with protective defensive runes and cool hero vibes.</p>
+    } @else {
       <h1>Spell & Weapon Shop</h1>
       <p>Equip yourself for adventures across the Land of Ooo!</p>
-    </header>
-  
-    <div class="items-grid">
-      @for (product of products(); track product.id) {
-        <app-product-card 
-          [item]="product" 
-          (addToPouch)="onAddItem($event)">
-        </app-product-card>
-      } @empty {
-        <p class="empty-notice">Choose Goose cleared out the inventory!</p>
-      }
-    </div>
+    }
+  </header>
+
+  <!-- --- POTIONS ANCHOR SECTION --- -->
+  <div class="category-divider-block" id="Potions">
+    <h2>🧪 Pure Potions</h2>
   </div>
-  
+  <div class="items-grid">
+    @for (product of products(); track product.id) {
+      @if (product.category === 'Potions') {
+        <app-product-card [item]="product" (addToPouch)="onAddItem($event)"></app-product-card>
+      }
+    }
+  </div>
+
+  <!-- --- WEAPONS ANCHOR SECTION --- -->
+  <div class="category-divider-block" id="Weapons">
+    <h2>⚔️ Heroic Weapons</h2>
+  </div>
+  <div class="items-grid">
+    @for (product of products(); track product.id) {
+      @if (product.category === 'Weapons') {
+        <app-product-card [item]="product" (addToPouch)="onAddItem($event)"></app-product-card>
+      }
+    }
+  </div>
+
+  <!-- --- ENCHANTED GEAR ANCHOR SECTION --- -->
+  <div class="category-divider-block" id="Enchanted Clothing">
+    <h2>🧥 Enchanted Gear</h2>
+  </div>
+  <div class="items-grid">
+    @for (product of products(); track product.id) {
+      @if (product.category === 'Enchanted Clothing') {
+        <app-product-card [item]="product" (addToPouch)="onAddItem($event)"></app-product-card>
+      }
+    }
+  </div>
+</div>
