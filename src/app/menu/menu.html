@@ -1,22 +1,12 @@
 <div class="menu-container">
-  <header class="shop-header">
-    @if (currentCategory() === 'Potions') {
-      <h1>Pure Potions</h1>
-      <p>Powerful magical brews and status enhancements straight from Wizard City labs.</p>
-    } @else if (currentCategory() === 'Weapons') {
-      <h1>Heroic Weapons</h1>
-      <p>Legendary blades and sharp gear forged to crush evil monsters.</p>
-    } @else if (currentCategory() === 'Enchanted Clothing') {
-      <h1>Enchanted Gear</h1>
-      <p>Mystical garments imbued with protective defensive runes and cool hero vibes.</p>
-    } @else {
-      <h1>Spell & Weapon Shop</h1>
-      <p>Equip yourself for adventures across the Land of Ooo!</p>
-    }
-  </header>
 
-  <!-- --- POTIONS SECTION --- -->
+  <!-- --- 🧪 POTIONS SECTION --- -->
   <div class="category-anchor" id="Potions"></div>
+  <header class="section-shop-header">
+    <h1>Pure Potions</h1>
+    <p>Powerful magical brews and status enhancements straight from Wizard City labs.</p>
+  </header>
+  
   <div class="items-grid">
     @for (product of products(); track product.id) {
       @if (product.category === 'Potions') {
@@ -25,8 +15,13 @@
     }
   </div>
 
-  <!-- --- WEAPONS SECTION --- -->
+  <!-- --- ⚔️ WEAPONS SECTION --- -->
   <div class="category-anchor" id="Weapons"></div>
+  <header class="section-shop-header">
+    <h1>Heroic Weapons</h1>
+    <p>Legendary blades and sharp gear forged to crush evil monsters.</p>
+  </header>
+  
   <div class="items-grid">
     @for (product of products(); track product.id) {
       @if (product.category === 'Weapons') {
@@ -35,8 +30,13 @@
     }
   </div>
 
-  <!-- --- ENCHANTED GEAR SECTION --- -->
+  <!-- --- 🧥 ENCHANTED GEAR SECTION --- -->
   <div class="category-anchor" id="Enchanted Clothing"></div>
+  <header class="section-shop-header">
+    <h1>Enchanted Gear</h1>
+    <p>Mystical garments imbued with protective defensive runes and cool hero vibes.</p>
+  </header>
+  
   <div class="items-grid">
     @for (product of products(); track product.id) {
       @if (product.category === 'Enchanted Clothing') {
@@ -44,4 +44,5 @@
       }
     }
   </div>
+
 </div>
