@@ -96,10 +96,8 @@
 }
 
 .btn-icon {
-  width: 90px;
-  height: 90px;
-  font-size: 4rem;
-  line-height: 1;
+  width: 100px; /* Expanded scaling wrapper footprint */
+  height: 100px; /* Expanded scaling wrapper footprint */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,7 +109,7 @@
   height: 100%;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7)); /* Enhanced glow clarity */
 }
 
 .nav-card-btn:hover .btn-icon {
