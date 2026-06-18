@@ -1,43 +1,78 @@
 .navbar {
-  background: #34495e;
+  background: rgba(44, 62, 80, 0.5) !important;
+  backdrop-filter: blur(12px) saturate(120%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(120%) !important;
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 4px solid #2c3e50;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Quicksand', sans-serif;
 }
 
 .nav-brand {
-  font-family: 'Caprasimo', serif;
   color: #f1c40f;
   font-size: 1.4rem;
+  font-weight: 800;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .nav-links a {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
-  color: #ecf0f1;
+  color: #fffdf4;
   text-decoration: none;
-  margin-left: 20px;
   font-size: 1.1rem;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: background 0.2s;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .nav-links a:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.nav-links a:active {
+  transform: translateY(1px);
 }
 
 .nav-links a.active {
-  background: #f1c40f;
-  color: #2c3e50;
+  background: #f1c40f !important;
+  color: #2c3e50 !important;
+  font-weight: 800;
+  border-color: #f39c12;
+  box-shadow: 0 4px 12px rgba(241, 196, 15, 0.3);
+  text-shadow: none;
 }
 
-.cart-link span {
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cart-link .badge {
   background: #e74c3c;
   color: white;
-  padding: 2px 6px;
-  border-radius: 10px;
-  font-size: 0.9rem;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links a.active .badge {
+  border-color: rgba(0, 0, 0, 0.15);
 }
