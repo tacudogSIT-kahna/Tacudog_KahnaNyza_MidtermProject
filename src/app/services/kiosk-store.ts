@@ -26,20 +26,19 @@ export class KioskStoreService {
     { id: 5, name: 'Twinkling Eye Potion', description: 'Illuminates dark caves and reveals hidden traps or invisible objects.', price: 950, category: 'Potions', imageUrl: 'twinkling-eye-potion.png' },
     { id: 16, name: 'Unfreezing Potion', description: 'Melts ice structures immediately and restores warmth to frostbitten limbs.', price: 200, category: 'Potions', imageUrl: 'unfreezing-potion.png' },
 
-    // --- WEAPONS (Updated with your local image assets) ---
     { id: 6, name: 'Axe Bass', description: 'Marceline’s deadly family heirloom bass guitar modified into a battle axe.', price: 3200, category: 'Weapons', imageUrl: 'axe-bass.png', isRare: true },
     { id: 7, name: 'Demon Blood Sword', description: 'Forged from true demon blood by Joshua. Feels rugged and dangerously cold.', price: 2500, category: 'Weapons', imageUrl: 'demon-blood-sword.png', isRare: true },
-    { id: 8, name: 'Finn’s Sword', description: 'Finn’s trusted, well-chipped classic golden blade with a black hilt.', price: 300, category: 'Weapons', imageUrl: 'finns-sword.png' },
-    { id: 9, name: 'Grass Sword', description: 'A cursed, bound blade of grass that integrates directly onto your arm.', price: 1800, category: 'Weapons', imageUrl: 'grass-sword.png' },
+    { id: 8, name: 'Finn’s Sword', description: 'Finn’s trusted, well-chipped classic golden blade with a black hilt.', price: 300, category: 'Weapons', imageUrl: 'finns-sword.png', isRare: true }, // ADDED RARE STATUS
+    { id: 9, name: 'Grass Sword', description: 'A cursed, bound blade of grass that integrates directly onto your arm.', price: 1800, category: 'Weapons', imageUrl: 'grass-sword.png', isRare: true }, // ADDED RARE STATUS
     { id: 10, name: 'Root Sword', description: 'A unique natural wood blade with an incredibly sharp, twisted root grip.', price: 500, category: 'Weapons', imageUrl: 'root-sword.png' },
-    { id: 17, name: 'Sound Sword', description: 'Projects powerful destructive golden shockwaves of pure sonic energy.', price: 1500, category: 'Weapons', imageUrl: 'sound-sword.png' },
+    { id: 17, name: 'Sound Sword', description: 'Projects powerful destructive golden shockwaves of pure sonic energy.', price: 1500, category: 'Weapons', imageUrl: 'sound-sword.png' },    
 
-    { id: 11, name: 'The Ice King’s Crown', description: 'Grants infinite frost magic at the cost of your sanity.', price: 9999, category: 'Enchanted Clothing', imageUrl: '👑', isRare: true },
-    { id: 12, name: 'Finn’s Bear Hat', description: 'Infuses the wearer with pure, righteous heroic fortitude.', price: 150, category: 'Enchanted Clothing', imageUrl: '🐻' },
-    { id: 13, name: 'Wizard City Robes', description: 'Standard initiates garb embedded with basic defense runes.', price: 400, category: 'Enchanted Clothing', imageUrl: '🥋' },
-    { id: 14, name: 'Marceline’s Sun Hat', description: 'Enchanted straw brim that blocks 100% of deadly UV light.', price: 250, category: 'Enchanted Clothing', imageUrl: '👒' },
-    { id: 15, name: 'Candy Royal Cape', description: 'Worn by Princess Bubblegum’s inner guard. Very pristine.', price: 800, category: 'Enchanted Clothing', imageUrl: '🧣' },
-    { id: 18, name: 'Jake’s Magical Sweater', description: 'Hand-knit by Bubblegum. Stretches dynamically with your size.', price: 1200, category: 'Enchanted Clothing', imageUrl: '🧶' }
+    { id: 6, name: 'Axe Bass', description: 'Marceline’s deadly family heirloom bass guitar modified into a battle axe.', price: 3200, category: 'Weapons', imageUrl: 'axe-bass.png', isRare: true },
+    { id: 7, name: 'Demon Blood Sword', description: 'Forged from true demon blood by Joshua. Feels rugged and dangerously cold.', price: 2500, category: 'Weapons', imageUrl: 'demon-blood-sword.png', isRare: true },
+    { id: 8, name: 'Finn’s Sword', description: 'Finn’s trusted, well-chipped classic golden blade with a black hilt.', price: 300, category: 'Weapons', imageUrl: 'finns-sword.png', isRare: true }, // ADDED RARE STATUS
+    { id: 9, name: 'Grass Sword', description: 'A cursed, bound blade of grass that integrates directly onto your arm.', price: 1800, category: 'Weapons', imageUrl: 'grass-sword.png', isRare: true }, // ADDED RARE STATUS
+    { id: 10, name: 'Root Sword', description: 'A unique natural wood blade with an incredibly sharp, twisted root grip.', price: 500, category: 'Weapons', imageUrl: 'root-sword.png' },
+    { id: 17, name: 'Sound Sword', description: 'Projects powerful destructive golden shockwaves of pure sonic energy.', price: 1500, category: 'Weapons', imageUrl: 'sound-sword.png' },    
   ]);
 
   private cartState = signal<CartItem[]>([]);
