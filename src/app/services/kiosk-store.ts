@@ -19,7 +19,6 @@ export interface CartItem extends ShopItem {
 })
 export class KioskStoreService {
   private itemsState = signal<ShopItem[]>([
-    // --- POTIONS (6 Items Total Linked to Local Images) ---
     { id: 1, name: 'Freezing Potion', description: 'Instantly flash-freezes targets or liquid surfaces on contact.', price: 150, category: 'Potions', imageUrl: 'freezing-potion.png' },
     { id: 2, name: 'Instant Bath Serum', description: 'Cleanses off grime, mud, and monster scents in a quick bubble snap.', price: 80, category: 'Potions', imageUrl: 'instant-bath-serum.png' },
     { id: 3, name: 'Paralyzing Potion', description: 'Fizzes intensely, temporarily freezing motor muscles on impact.', price: 450, category: 'Potions', imageUrl: 'paralyzing-potion.png' },
@@ -27,15 +26,14 @@ export class KioskStoreService {
     { id: 5, name: 'Twinkling Eye Potion', description: 'Illuminates dark caves and reveals hidden traps or invisible objects.', price: 950, category: 'Potions', imageUrl: 'twinkling-eye-potion.png' },
     { id: 16, name: 'Unfreezing Potion', description: 'Melts ice structures immediately and restores warmth to frostbitten limbs.', price: 200, category: 'Potions', imageUrl: 'unfreezing-potion.png' },
 
-    // --- WEAPONS (6 Items Total) ---
-    { id: 6, name: 'Demon Blood Sword', description: 'Forged by Joshua. Feels rugged and dangerously cold.', price: 2500, category: 'Weapons', imageUrl: '🗡️', isRare: true },
-    { id: 7, name: 'Scarlet (Golden Sword)', description: 'Finn’s trusted, well-chipped classic battle blade.', price: 300, category: 'Weapons', imageUrl: '⚔️' },
-    { id: 8, name: 'The Grass Sword', description: 'A cursed, bound blade that integrates directly with your arm.', price: 1800, category: 'Weapons', imageUrl: '🌱' },
-    { id: 9, name: 'Marceline’s Axe Bass', description: 'Family heirloom modified into a rockin’ weapon.', price: 3200, category: 'Weapons', imageUrl: '🎸', isRare: true },
-    { id: 10, name: 'Jake’s Spiked Mace', description: 'Formed directly from Jake’s shape-shifted magical fist.', price: 600, category: 'Weapons', imageUrl: '🔨' },
-    { id: 17, name: 'Root Sword', description: 'Finn’s natural wood blade with a razor sharp grass edge.', price: 500, category: 'Weapons', imageUrl: '🪵' },
+    // --- WEAPONS (Updated with your local image assets) ---
+    { id: 6, name: 'Axe Bass', description: 'Marceline’s deadly family heirloom bass guitar modified into a battle axe.', price: 3200, category: 'Weapons', imageUrl: 'axe-bass.png', isRare: true },
+    { id: 7, name: 'Demon Blood Sword', description: 'Forged from true demon blood by Joshua. Feels rugged and dangerously cold.', price: 2500, category: 'Weapons', imageUrl: 'demon-blood-sword.png', isRare: true },
+    { id: 8, name: 'Finn’s Sword', description: 'Finn’s trusted, well-chipped classic golden blade with a black hilt.', price: 300, category: 'Weapons', imageUrl: 'finns-sword.png' },
+    { id: 9, name: 'Grass Sword', description: 'A cursed, bound blade of grass that integrates directly onto your arm.', price: 1800, category: 'Weapons', imageUrl: 'grass-sword.png' },
+    { id: 10, name: 'Root Sword', description: 'A unique natural wood blade with an incredibly sharp, twisted root grip.', price: 500, category: 'Weapons', imageUrl: 'root-sword.png' },
+    { id: 17, name: 'Sound Sword', description: 'Projects powerful destructive golden shockwaves of pure sonic energy.', price: 1500, category: 'Weapons', imageUrl: 'sound-sword.png' },
 
-    // --- ENCHANTED CLOTHING (6 Items Total) ---
     { id: 11, name: 'The Ice King’s Crown', description: 'Grants infinite frost magic at the cost of your sanity.', price: 9999, category: 'Enchanted Clothing', imageUrl: '👑', isRare: true },
     { id: 12, name: 'Finn’s Bear Hat', description: 'Infuses the wearer with pure, righteous heroic fortitude.', price: 150, category: 'Enchanted Clothing', imageUrl: '🐻' },
     { id: 13, name: 'Wizard City Robes', description: 'Standard initiates garb embedded with basic defense runes.', price: 400, category: 'Enchanted Clothing', imageUrl: '🥋' },
